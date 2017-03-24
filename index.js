@@ -2,6 +2,7 @@ let md = markdownit();
 let $dropZone = $('.drop-zone');
 let $fileList = $('.file-list');
 let $downloadBtn = $('.download-btn');
+let $previewContainer = $('.preview-container');
 
 $dropZone
 	.on('drag dragstart dragend dragover dragenter dragleave drop', function(e) {
@@ -29,17 +30,24 @@ $dropZone
 						let lang = /en/i.test(filename) ? 'en' : 'zh';
 						let role = /admin/i.test(filename) ? 'admin' : 'agent';
 						return {
-							[lang + '_' + role]: mdStr
+							title: lang + '_' + role,
+							contant: mdStr,
 						};
 					});
 					let jsonStr = JSON.stringify(result);
 					let blob = new Blob([jsonStr]);
 					let url = URL.createObjectURL(blob);
 					$downloadBtn.attr('href', url).removeClass('hide');
+					// preview
+					$previewContainer.html(getPreview(result)).find('a').attr('target', '_blank');
 				},
 				err => console.error(err)
 			);
 	});
+
+let getPreview = result => result.map(
+		item => `<header>${item.title}</header><article class="preview-window">${item.content}</article>`
+	).join('');
 
 let promiseReader = file => new Promise(function(resolve, reject) {
 	let reader = new FileReader();

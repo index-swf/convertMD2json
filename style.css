@@ -25,3 +25,56 @@
 .file-list {
 	list-style-type: circle;
 }
+
+.preview-window {
+	background-color: white;
+	color: #444;
+	font-size: 14px;
+	line-height: 1.5em;
+	padding: 1em;
+	position: relative;
+	width: 600px;
+}
+
+.preview-window > *:last-child {
+	position: absolute;
+	right: 15px;
+	bottom: 12px;
+}
+
+.preview-window a{color:#1bbaf3;text-decoration:none;}
+.preview-window p{margin:1em 0;}
+.preview-window img{max-width:100%;}
+.preview-window h1,
+.preview-window h2,
+.preview-window h3,
+.preview-window h4,
+.preview-window h5,
+.preview-window h6{font-size:14px;font-weight:normal;color:#000;line-height:1em;}
+.preview-window h4,
+.preview-window h5,
+.preview-window h6{font-weight:bold;}
+.preview-window blockquote{color:#666666;margin:0;padding-left:3em;border-left:0.5em #2196f3 solid;}
+.preview-window hr{display:block;height:2px;border:0;border-top:1px solid #aaa;border-bottom:1px solid #eee;margin:1em 0;padding:0;}
+.preview-window pre,
+.preview-window code,
+.preview-window kbd,
+.preview-window samp{color:#000;font-family:monospace,monospace;_font-family:'courier new',monospace;font-size:0.98em;}
+.preview-window pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word;}
+.preview-window b,
+.preview-window strong{font-weight:bold;}
+.preview-window dfn{font-style:italic;}
+.preview-window ins{background:#ff9;color:#000;text-decoration:none;}
+.preview-window mark{background:#ff0;color:#000;font-style:italic;font-weight:bold;}
+.preview-window sub,
+.preview-window sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}
+.preview-window sup{top:-0.5em;}
+.preview-window sub{bottom:-0.25em;}
+.preview-window ul,
+.preview-window ol{margin:1em 0;padding:0 0 0 2em;list-style:initial;}
+.preview-window li{color:#888;}
+.preview-window li p:last-child{margin:0;}
+.preview-window dd{margin:0 0 0 2em;}
+.preview-window img{border:0;-ms-interpolation-mode:bicubic;vertical-align:middle;}
+.preview-window table{border-collapse:collapse;border-spacing:0;}
+.preview-window td{vertical-align:top;}
