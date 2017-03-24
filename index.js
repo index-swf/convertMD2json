@@ -31,7 +31,7 @@ $dropZone
 						let role = /admin/i.test(filename) ? 'admin' : 'agent';
 						return {
 							title: lang + '_' + role,
-							contant: mdStr,
+							content: mdStr,
 						};
 					});
 					let jsonStr = JSON.stringify(result);
