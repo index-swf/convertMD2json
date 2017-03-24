@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv='X-UA-Compatible' content='IE=Edge,chrome=1' />
+	<meta name='viewport' content='width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=no' />
+	<link href='style.css' rel='stylesheet' />
+</head>
+
+<body>
+	<div class="drop-zone">
+		<p>
+			Drop files here
+		</p>
+		<p class="hide">
+			or
+		</p>
+		<p>
+			<button class="select-btn hide">
+				Select files
+			</button>
+		</p>
+	</div>
+	<input type="file" class="hide" id="file-input">
+	<ul class="file-list"></ul>
+	<a class="download-btn hide" download="result.json">Click to download!</a>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/8.3.1/markdown-it.min.js"></script>
+	<script src="index.js"></script>
+</body>
+
+</html>
