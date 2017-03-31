@@ -27,8 +27,8 @@ $dropZone
 						let html = reader.result;
 						let mdStr = md.render(html).replace(/\r?\n/g, '');
 						let filename = droppedFileArray[i].name;
-						let lang = /en/i.test(filename) ? 'en' : 'zh';
-						let role = /admin/i.test(filename) ? 'admin' : 'agent';
+						let lang = /\ben\b/i.test(filename) ? 'en' : 'zh';
+						let role = /\badmin\b/i.test(filename) ? 'admin' : 'agent';
 						return {
 							title: lang + '_' + role,
 							content: mdStr,
