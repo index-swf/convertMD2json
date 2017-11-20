@@ -37,9 +37,15 @@ $dropZone
 					let jsonStr = JSON.stringify(result);
 					let blob = new Blob([jsonStr]);
 					let url = URL.createObjectURL(blob);
-					$downloadBtn.attr('href', url).removeClass('hide');
+					$downloadBtn
+					.attr('href', url)
+					.attr("download", `result-${new Date().getTime()}.json`)					
+					.removeClass('hide');
 					// preview
-					$previewContainer.html(getPreview(result)).find('a').attr('target', '_blank');
+					$previewContainer
+					.html(getPreview(result))
+					.find('a')
+					.attr('target', '_blank');
 				},
 				err => console.error(err)
 			);
